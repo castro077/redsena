@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Social SENA</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      color: #0b6623;
+      margin-top: 20px;
+    }
+
+    .container {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      margin: 20px 0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    #user-email {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: #0b6623;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    button:hover {
+      background: #0a5a1f;
+    }
+
+    #posts {
+      margin-top: 20px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .post {
+      background: #e8f5e9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .post strong {
+      color: #0b6623;
+    }
+
+    .delete-btn {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: red;
+      padding: 3px 6px;
+      font-size: 12px;
+    }
+
+    .delete-btn:hover {
+      background: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Bienvenido a la Red Social SENA</h2>
+
+  <div class="container">
+    <p id="user-email"></p>
+    <textarea id="postText" placeholder="¿Qué estás pensando?" rows="3"></textarea><br>
+    <button id="postBtn">Publicar</button>
+    <button id="logout">Cerrar sesión</button>
+  </div>
+
+  <div class="container">
+    <h3>Publicaciones</h3>
+    <div id="posts"></div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
